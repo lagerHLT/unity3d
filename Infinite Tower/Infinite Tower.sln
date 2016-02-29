@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infinite Tower.CSharp", "Infinite Tower.CSharp.csproj", "{A029DBFF-20CD-A642-ADF1-CF957165BC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infinite Tower.CSharp.Editor", "Infinite Tower.CSharp.Editor.csproj", "{952A8100-FDD0-CFAD-74A3-8D6D07BF99DD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{A029DBFF-20CD-A642-ADF1-CF957165BC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A029DBFF-20CD-A642-ADF1-CF957165BC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A029DBFF-20CD-A642-ADF1-CF957165BC39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{952A8100-FDD0-CFAD-74A3-8D6D07BF99DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{952A8100-FDD0-CFAD-74A3-8D6D07BF99DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{952A8100-FDD0-CFAD-74A3-8D6D07BF99DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{952A8100-FDD0-CFAD-74A3-8D6D07BF99DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

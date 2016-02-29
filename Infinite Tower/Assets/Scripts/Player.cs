@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Player : MonoBehaviour
 {
     public float jumpForce = 20f;
@@ -12,9 +13,9 @@ public class Player : MonoBehaviour
     private bool _jumpTriggered = false;
     private Rigidbody2D _playerRigidBody2D;
     private Transform _groundCheck, _wallCheckRight, _wallCheckLeft;
-    private float collisionRadius = .01f;
-    [SerializeField] private LayerMask whatIsGround;
-    [SerializeField] private LayerMask whatIsWall;
+    private float collisionRadius = .02f;
+    [SerializeField] public LayerMask whatIsGround;
+    [SerializeField] public LayerMask whatIsWall;
 
     public void Start(){
         _groundCheck = transform.Find("GroundCheck");
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
     }
     public void Update(){
         if (!_jumpTriggered && _onGround) {
-            _jumpTriggered = Input.GetMouseButton(0);//Input.GetKey(KeyCode.Space);
+            _jumpTriggered = Input.GetMouseButton(0);//Input.GetKeyDown(KeyCode.Space);//
             if (_jumpTriggered)
                 Debug.Log("Jump triggered");
         }
