@@ -24,7 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411616}
-  - 61: {fileID: 6184496}
+  - 61: {fileID: 6114566}
   m_Layer: 10
   m_Name: Block
   m_TagString: Floor
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.21, y: -4.28, z: 0}
+  m_LocalPosition: {x: 3.4459596, y: -6.5193214, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 435540}
@@ -57,7 +57,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 411616}
   m_RootOrder: 0
---- !u!61 &6184496
+--- !u!61 &6114566
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,9 +68,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.01, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.21, y: 1.2}
+  m_Size: {x: 1.22, y: 1.2}
 --- !u!212 &21284536
 SpriteRenderer:
   m_ObjectHideFlags: 1
