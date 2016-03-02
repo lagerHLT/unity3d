@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     }
     public void Update() {
         if (!_jumpTriggered && _onGround)
-            _jumpTriggered = Input.GetMouseButton(0);//Input.GetKeyDown(KeyCode.Space);//
+            _jumpTriggered = Input.GetMouseButtonDown(0);//Input.GetKeyDown(KeyCode.Space);//
     }
     public void FixedUpdate() {
         //_velocity.x = _movementSpeed;
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         }
         else
             _onGround = Physics2D.OverlapCircle(_groundCheck.position, collisionRadius, whatIsGround);
-            //_onGround = Physics2D.CircleCast(_groundCheck.position, collisionRadius, whatIsGround);
+            //_onGround = Physics2D.CircleCast(_groundCheck.position, collisionRadius, Vector2.down, whatIsGround);
 
             var isCollidingWall = (_isMovingRight == 1) ? Physics2D.OverlapCircle(_wallCheckRight.position, collisionRadius, whatIsWall) : Physics2D.OverlapCircle(_wallCheckLeft.position, collisionRadius, whatIsWall);
         if (isCollidingWall)
