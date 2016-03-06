@@ -198,9 +198,6 @@ MonoBehaviour:
     m_Bits: 8192
   horizontalRayCount: 2
   verticalRayCount: 2
-  horizontalRaySpacing: 0
-  verticalRaySpacing: 0
-  collider: {fileID: 0}
 --- !u!114 &1869169117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405b175d4acc9854fa4a5777145e8689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 4
-  timeToJumpApex: 0.4
+  jumpHeight: 6
+  timeToJumpApex: 0.6
 --- !u!23 &1869169118
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -35,7 +35,6 @@ public class Controller2D : RayCastController2D {
             }
         }
     }
-
     void VerticalCollisions(ref Vector3 velocity) {
         float directionY = Mathf.Sign(velocity.y);
         float rayLength = Mathf.Abs(velocity.y) + skinWidth;

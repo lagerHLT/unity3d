@@ -9,16 +9,18 @@ public class Player : MonoBehaviour
     float accelerationTimeAirborne = .2f;
     float accelerationTimeGrounded = .1f;
     float moveSpeed = 6;
-    float gravity;
+    float gravityNormal, gravityFloat;
     float jumpVelocity;
-    Vector3 velocity;
     float velocityXSmoothing;
+    bool goingDown = false;
+    Vector3 velocity;
     Controller2D controller;
 
     void Start() {
         controller = GetComponent<Controller2D>();
-        gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
-        jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
+        gravityNormal = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);
+        gravityFloat = gravityNormal / 3;
+        jumpVelocity = Mathf.Abs(gravityNormal) * timeToJumpApex;
     }
 
     void Update() {
@@ -26,13 +28,16 @@ public class Player : MonoBehaviour
             velocity.y = 0;
 
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        input.x = 1; //constant movement forward
+        //input.x = 1; //constant movement forward
         if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
             velocity.y = jumpVelocity;
 
         float targetVelocityX = input.x * moveSpeed;
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
-        velocity.y += gravity * Time.deltaTime;
+        if (!goingDown)
+            velocity.y += gravityNormal * Time.deltaTime;
+        else
+            velocity.y += gravityFloat * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 }
